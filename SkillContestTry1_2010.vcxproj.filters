@@ -12,6 +12,9 @@
       <UniqueIdentifier>{2c3d4c8c-5d1a-459a-a05a-a4e4b608a44e}</UniqueIdentifier>
       <Extensions>fx;fxh;hlsl</Extensions>
     </Filter>
+    <Filter Include="Componenet">
+      <UniqueIdentifier>{9d7dab11-8575-4074-a674-da8e240f2ea9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -74,9 +77,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SkillContestTry1.cpp" />
+    <ClCompile Include="TextureInfo.cpp">
+      <Filter>Componenet</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SkillContestTry1.h" />
+    <ClInclude Include="TextureInfo.h">
+      <Filter>Componenet</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
