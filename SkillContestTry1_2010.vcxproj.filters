@@ -15,6 +15,9 @@
     <Filter Include="Componenet">
       <UniqueIdentifier>{9d7dab11-8575-4074-a674-da8e240f2ea9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Managers">
+      <UniqueIdentifier>{d5e224a3-1708-41c1-8f89-4701c25f4de3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -80,11 +83,17 @@
     <ClCompile Include="TextureInfo.cpp">
       <Filter>Componenet</Filter>
     </ClCompile>
+    <ClCompile Include="Layer.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SkillContestTry1.h" />
     <ClInclude Include="TextureInfo.h">
       <Filter>Componenet</Filter>
+    </ClInclude>
+    <ClInclude Include="Layer.h">
+      <Filter>Managers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

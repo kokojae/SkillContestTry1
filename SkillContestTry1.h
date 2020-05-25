@@ -6,3 +6,6 @@
 
 // Component
 #include "TextureInfo.h"
+
+// Managers
+#include "Layer.h"

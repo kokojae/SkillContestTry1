@@ -384,7 +384,9 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Layer.cpp" />
     <ClCompile Include="TextureInfo.cpp" />
+    <ClInclude Include="Layer.h" />
     <ClInclude Include="SkillContestTry1.h" />
     <ClInclude Include="TextureInfo.h" />
     <None Include="DXUT\Optional\directx.ico" />
