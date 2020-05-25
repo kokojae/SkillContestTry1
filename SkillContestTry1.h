@@ -10,4 +10,5 @@
 // Managers
 #include "Camera.h"
 #include "Layer.h"
+#include "SoundManager.h"
 #include "TextureManager.h"
