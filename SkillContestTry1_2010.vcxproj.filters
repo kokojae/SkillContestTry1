@@ -89,6 +89,9 @@
     <ClCompile Include="Camera.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SkillContestTry1.h" />
@@ -99,6 +102,9 @@
       <Filter>Managers</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
       <Filter>Managers</Filter>
     </ClInclude>
   </ItemGroup>

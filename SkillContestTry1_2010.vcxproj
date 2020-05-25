@@ -387,10 +387,12 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="TextureInfo.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="SkillContestTry1.h" />
     <ClInclude Include="TextureInfo.h" />
+    <ClInclude Include="TextureManager.h" />
     <None Include="DXUT\Optional\directx.ico" />
     <ClInclude Include="DXUT\Core\DXUT.h" />
     <ClInclude Include="DXUT\Core\DXUTenum.h" />

@@ -10,3 +10,4 @@
 // Managers
 #include "Camera.h"
 #include "Layer.h"
+#include "TextureManager.h"
