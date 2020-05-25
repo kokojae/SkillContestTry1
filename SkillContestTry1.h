@@ -8,4 +8,5 @@
 #include "TextureInfo.h"
 
 // Managers
+#include "Camera.h"
 #include "Layer.h"
