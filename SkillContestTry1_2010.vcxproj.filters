@@ -107,6 +107,9 @@
     <ClCompile Include="BoxCollider.cpp">
       <Filter>Componenet</Filter>
     </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SkillContestTry1.h" />
@@ -136,6 +139,9 @@
     </ClInclude>
     <ClInclude Include="BoxCollider.h">
       <Filter>Componenet</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>Managers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

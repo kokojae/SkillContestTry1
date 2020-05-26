@@ -12,5 +12,6 @@
 #include "Camera.h"
 #include "Layer.h"
 #include "MouseManager.h"
+#include "ObjectManager.h"
 #include "SoundManager.h"
 #include "TextureManager.h"
