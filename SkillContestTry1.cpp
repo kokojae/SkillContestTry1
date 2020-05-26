@@ -6,6 +6,7 @@
 #include "DXUT.h"
 #include "resource.h"
 #include "SkillContestTry1.h"
+#include <windowsx.h>
 
 
 //--------------------------------------------------------------------------------------
@@ -88,6 +89,29 @@ void CALLBACK OnD3D9FrameRender( IDirect3DDevice9* pd3dDevice, double fTime, flo
 LRESULT CALLBACK MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam,
                           bool* pbNoFurtherProcessing, void* pUserContext )
 {
+    if (uMsg == WM_LBUTTONDOWN)
+        MouseManager::leftBtn = true;
+    if (uMsg == WM_MBUTTONDOWN)
+        MouseManager::leftBtn = true;
+    if (uMsg == WM_RBUTTONDOWN)
+        MouseManager::leftBtn = true;
+
+    if (uMsg == WM_LBUTTONUP)
+        MouseManager::leftBtn = false;
+    if (uMsg == WM_MBUTTONUP)
+        MouseManager::leftBtn = false;
+    if (uMsg == WM_RBUTTONUP)
+        MouseManager::leftBtn = false;
+
+    if (uMsg == WM_MOUSEMOVE)
+    {
+        MouseManager::position = {
+            static_cast<float>(GET_X_LPARAM(lParam)) - SCREEN_WIDTH / 2,
+            static_cast<float>(GET_Y_LPARAM(lParam)) - SCREEN_HEIGHT / 2
+        };
+        MouseManager::position += Camera::position;
+    }
+
     return 0;
 }
 

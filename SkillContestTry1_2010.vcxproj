@@ -388,6 +388,7 @@
     <ClCompile Include="DXUT\Optional\SDKsound.cpp" />
     <ClCompile Include="DXUT\Optional\SDKwavefile.cpp" />
     <ClCompile Include="Layer.cpp" />
+    <ClCompile Include="MouseManager.cpp" />
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="TextureInfo.cpp" />
     <ClCompile Include="TextureManager.cpp" />
@@ -395,6 +396,7 @@
     <ClInclude Include="DXUT\Optional\SDKsound.h" />
     <ClInclude Include="DXUT\Optional\SDKwavefile.h" />
     <ClInclude Include="Layer.h" />
+    <ClInclude Include="MouseManager.h" />
     <ClInclude Include="SkillContestTry1.h" />
     <ClInclude Include="SoundManager.h" />
     <ClInclude Include="TextureInfo.h" />
