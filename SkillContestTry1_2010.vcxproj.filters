@@ -110,6 +110,9 @@
     <ClCompile Include="ObjectManager.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
+    <ClCompile Include="GraphicManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SkillContestTry1.h" />
@@ -141,6 +144,9 @@
       <Filter>Componenet</Filter>
     </ClInclude>
     <ClInclude Include="ObjectManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicManager.h">
       <Filter>Managers</Filter>
     </ClInclude>
   </ItemGroup>

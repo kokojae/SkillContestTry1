@@ -10,6 +10,7 @@
 
 // Managers
 #include "Camera.h"
+#include "GraphicManager.h"
 #include "Layer.h"
 #include "MouseManager.h"
 #include "ObjectManager.h"
