@@ -122,6 +122,9 @@
     <ClCompile Include="GameObject.cpp">
       <Filter>GameObject\Base</Filter>
     </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>GameObject\Base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SkillContestTry1.h" />
@@ -159,6 +162,9 @@
       <Filter>Managers</Filter>
     </ClInclude>
     <ClInclude Include="GameObject.h">
+      <Filter>GameObject\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
       <Filter>GameObject\Base</Filter>
     </ClInclude>
   </ItemGroup>

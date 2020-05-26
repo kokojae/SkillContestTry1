@@ -394,6 +394,7 @@
     <ClCompile Include="MouseManager.cpp" />
     <ClCompile Include="ObjectManager.cpp" />
     <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="Text.cpp" />
     <ClCompile Include="TextureInfo.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClInclude Include="BoxCollider.h" />
@@ -407,6 +408,7 @@
     <ClInclude Include="ObjectManager.h" />
     <ClInclude Include="SkillContestTry1.h" />
     <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="Text.h" />
     <ClInclude Include="TextureInfo.h" />
     <ClInclude Include="TextureManager.h" />
     <None Include="DXUT\Optional\directx.ico" />
