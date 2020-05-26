@@ -8,6 +8,10 @@
 #include "BoxCollider.h"
 #include "TextureInfo.h"
 
+// GameObject
+// Base
+#include "GameObject.h"
+
 // Managers
 #include "Camera.h"
 #include "GraphicManager.h"
