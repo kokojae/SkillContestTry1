@@ -81,10 +81,10 @@ void GameObject::SetCollider(D3DXVECTOR2 colliderSize, int layer)
 RECT* GameObject::GetRect(D3DXVECTOR2 vector)
 {
 	rc = {
-		(position - collider.center + vector).x,
-		(position - collider.center + vector).y,
-		(position - collider.center + vector + collider.size).x,
-		(position - collider.center + vector + collider.size).y,
+		static_cast<LONG>((position - collider.center + vector).x),
+		static_cast<LONG>((position - collider.center + vector).y),
+		static_cast<LONG>((position - collider.center + vector + collider.size).x),
+		static_cast<LONG>((position - collider.center + vector + collider.size).y),
 	};
 
 	return &rc;
