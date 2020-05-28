@@ -29,7 +29,7 @@ public:
 	GameObject* PlaceMeeting(D3DXVECTOR2 vector, int layer = Layer::DEFAULT);
 	bool IsClicked(MouseManager::Key key = MouseManager::Key::ANY);
 
-	void SetTexture(std::wstring path, D3DXVECTOR2 textureSize, D3DXVECTOR2 textureScale);
+	void SetTexture(std::wstring path, D3DXVECTOR2 textureSize, D3DXVECTOR2 textureScale = { 1,1 });;
 	void SetCollider(D3DXVECTOR2 colliderSize, int layer);
 
 	RECT* GetRect(D3DXVECTOR2 vector = { 0,0 });
