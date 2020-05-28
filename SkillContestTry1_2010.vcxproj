@@ -394,6 +394,8 @@
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="MouseManager.cpp" />
     <ClCompile Include="ObjectManager.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerBullet.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="Text.cpp" />
@@ -409,6 +411,8 @@
     <ClInclude Include="Layer.h" />
     <ClInclude Include="MouseManager.h" />
     <ClInclude Include="ObjectManager.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerBullet.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SkillContestTry1.h" />
     <ClInclude Include="SoundManager.h" />

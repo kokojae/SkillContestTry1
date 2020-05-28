@@ -1,8 +1,8 @@
 #pragma once
 
-#define SCREEN_WIDTH 1920
-#define SCREEN_HEIGHT 1080
-#define WINDOWED false
+#define SCREEN_WIDTH 1250
+#define SCREEN_HEIGHT 720
+#define WINDOWED true
 
 // Component
 #include "BoxCollider.h"
@@ -12,6 +12,10 @@
 // Base
 #include "GameObject.h"
 #include "Text.h"
+// Bullet
+#include "PlayerBullet.h"
+// Player
+#include "Player.h"
 
 // Managers
 #include "Camera.h"
@@ -23,3 +27,5 @@
 #include "SceneManager.h"
 #include "SoundManager.h"
 #include "TextureManager.h"
+
+#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console") 
