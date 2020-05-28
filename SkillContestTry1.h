@@ -15,6 +15,7 @@
 
 // Managers
 #include "Camera.h"
+#include "GameManager.h"
 #include "GraphicManager.h"
 #include "Layer.h"
 #include "MouseManager.h"
