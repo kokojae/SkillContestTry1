@@ -19,5 +19,6 @@
 #include "Layer.h"
 #include "MouseManager.h"
 #include "ObjectManager.h"
+#include "SceneManager.h"
 #include "SoundManager.h"
 #include "TextureManager.h"
