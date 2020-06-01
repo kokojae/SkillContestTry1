@@ -8,7 +8,6 @@ class ObjectManager
 {
 public:
 	static std::list<GameObject*> objectList;
-	static std::list<GameObject*> colliderList;
 
 	template<typename T>
 	static T* Instantiate(D3DXVECTOR2 position = { 0,0 });

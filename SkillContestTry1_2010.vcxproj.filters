@@ -30,6 +30,21 @@
     <Filter Include="GameObject\Bullet">
       <UniqueIdentifier>{92750e8a-b490-4d29-a132-7aac1ee110e5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Enemy">
+      <UniqueIdentifier>{fa2eee79-aef8-4b5c-b714-0d133712720e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{6f100c81-6f16-4d11-8fa2-5eb1dcabe861}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Stage">
+      <UniqueIdentifier>{05549b8a-a399-4c9c-aec8-4872915b546a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Player\Skill">
+      <UniqueIdentifier>{aa04c2f9-4ad1-408c-a34b-36bcda214616}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Enemy\Boss">
+      <UniqueIdentifier>{8825726b-b620-4a28-b190-b4e6d0a85894}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -137,10 +152,39 @@
     <ClCompile Include="GameManager.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>GameObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBullet.cpp">
+      <Filter>GameObject\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerBullet.cpp">
+      <Filter>GameObject\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Title.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="BackGround.cpp">
+      <Filter>Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="BigFuckBomb.cpp">
+      <Filter>GameObject\Player\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="Sheild.cpp">
+      <Filter>GameObject\Player\Skill</Filter>
+    </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>GameObject\Player</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerBullet.cpp" />
+    <ClCompile Include="BombBullet.cpp">
+      <Filter>GameObject\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss.cpp">
+      <Filter>GameObject\Enemy\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="BossHpBar.cpp">
+      <Filter>GameObject\Enemy\Boss</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SkillContestTry1.h" />
@@ -189,10 +233,39 @@
     <ClInclude Include="GameManager.h">
       <Filter>Managers</Filter>
     </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>GameObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBullet.h">
+      <Filter>GameObject\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerBullet.h">
+      <Filter>GameObject\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Title.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="BackGround.h">
+      <Filter>Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="BigFuckBomb.h">
+      <Filter>GameObject\Player\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="Sheild.h">
+      <Filter>GameObject\Player\Skill</Filter>
+    </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>GameObject\Player</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerBullet.h" />
+    <ClInclude Include="BombBullet.h">
+      <Filter>GameObject\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss.h">
+      <Filter>GameObject\Enemy\Boss</Filter>
+    </ClInclude>
+    <ClInclude Include="BossHpBar.h">
+      <Filter>GameObject\Enemy\Boss</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">

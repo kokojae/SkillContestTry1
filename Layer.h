@@ -8,8 +8,8 @@ public:
 	const static int ITEM			= 1 << 4;
 	const static int PLAYER_BULLET	= 1 << 5;
 	const static int ENEMY_BULLET	= 1 << 6;
-	const static int BLANK1			= 1 << 7;
-	const static int BLANK2			= 1 << 8;
+	const static int SHEILD			= 1 << 7;
+	const static int BOMB			= 1 << 8;
 	const static int BLANK3			= 1 << 9;
 };
 

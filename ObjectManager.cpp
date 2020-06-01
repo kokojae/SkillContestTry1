@@ -3,7 +3,6 @@
 #include "SkillContestTry1.h"
 
 std::list<GameObject*> ObjectManager::objectList = std::list<GameObject*>();
-std::list<GameObject*> ObjectManager::colliderList = std::list<GameObject*>();
 
 void ObjectManager::Update()
 {

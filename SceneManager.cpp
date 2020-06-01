@@ -15,14 +15,23 @@ void SceneManager::LoadScene(Scene scene)
 	ObjectManager::Clear();
 	SoundManager::EndAllSFX();
 
+	GameManager::player = nullptr;
+
 	switch (scene)
 	{
 	case SceneManager::Scene::TITLE:
-		ObjectManager::Instantiate<Player>();
+		ObjectManager::Instantiate<Title>();
 		break;
 	case SceneManager::Scene::RANK_BOARD:
 		break;
 	case SceneManager::Scene::STAGE1:
+		ObjectManager::Instantiate<BackGround>({ 2600 - SCREEN_WIDTH / 2,0 });
+		ObjectManager::Instantiate<Player>();
+		//for (int i = 0; i < 5; i++)
+		//{
+		//	ObjectManager::Instantiate<Enemy>({ 300,((float)i * 150) - 180 });
+		//}
+		ObjectManager::Instantiate<Boss>({ 500, 0 });
 		break;
 	case SceneManager::Scene::STAGE2:
 		break;
