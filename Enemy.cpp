@@ -66,10 +66,13 @@ void Enemy::Detection()
 	auto inst = ObjectManager::ColliderCheck(&detectionRect, Layer::PLAYER);
 	if (inst != nullptr)
 	{
-		if (fireBetTime <= 0)
+		if (!GameManager::isBombing)
 		{
-			fireBetTime = betTime;
-			ObjectManager::Instantiate<EnemyBullet>(position)->SetBullet({ -1,0 }, 25, 10, 3);
+			if (fireBetTime <= 0)
+			{
+				fireBetTime = betTime;
+				ObjectManager::Instantiate<EnemyBullet>(position)->SetBullet({ -1,0 }, 25, 10, 3);
+			}
 		}
 	}
 }

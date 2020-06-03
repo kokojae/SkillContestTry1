@@ -38,6 +38,7 @@ void SceneManager::LoadScene(Scene scene)
 	case SceneManager::Scene::RESULT:
 		break;
 	case SceneManager::Scene::RANK_INPUT:
+		ObjectManager::Instantiate<RankInput>();
 		break;
 	default:
 		break;

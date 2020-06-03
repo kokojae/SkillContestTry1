@@ -20,12 +20,17 @@ void Player::Init()
 	straightTime = 0.05;
 	radialTime = 0.1;
 	fireBetTime = 0;
-
+	score = 0;
 	UIText = ObjectManager::Instantiate<Text>();
 	UIText->SetText(L"", { 1,1 }, true);
 	UIText->z = 100;
 
 	sheild = nullptr;
+	sheildTime = 5;
+	bombingTime = 5;
+	noticeText = nullptr;
+	noticeTextTime = 0;
+
 	isImmortal = true;
 
 	GameManager::player = this;
@@ -47,6 +52,7 @@ void Player::Update()
 void Player::LateUpdate()
 {
 	Camera::position.x += 1;
+	LockInCamera();
 }
 
 void Player::Move()
@@ -152,13 +158,53 @@ void Player::Toggle()
 
 void Player::Skill()
 {
-	if (GetAsyncKeyState('C'))
-		if (level >= 2)
-			SetShield();
-	if (GetAsyncKeyState('V'))
-		if (level >= 4)
-			SetBFB();
+	static bool isBombPush = false;
+	static bool isSheildPush = false;
 
+	sheildTime -= DXUTGetElapsedTime();
+	bombingTime -= DXUTGetElapsedTime();
+	noticeTextTime -= DXUTGetElapsedTime();
+
+	if (GetAsyncKeyState('C') && level >= 2)
+	{
+		if (sheildTime <= 0)
+		{
+			sheildTime = 5;
+			SetShield();
+		}
+		else
+		{
+			noticeTextTime = 2;
+			if (noticeText == nullptr)
+				noticeText = ObjectManager::Instantiate<Text>({ SCREEN_WIDTH / 4,SCREEN_HEIGHT - 200 });
+			noticeText->SetText(L"쉴드 재사용 대기 시간인데수웅", { 1,1 }, true);
+		}
+	}
+	if (GetAsyncKeyState('V') && level >= 4)
+	{
+
+		if (bombingTime <= 0)
+		{
+			bombingTime = 5;
+			SetBFB();
+		}
+		else
+		{
+			noticeTextTime = 2;
+			if (noticeText == nullptr)
+				noticeText = ObjectManager::Instantiate<Text>({ SCREEN_WIDTH / 4, SCREEN_HEIGHT - 200 });
+			noticeText->SetText(L"폭탄 재사용 대기 시간인데수웅", { 1,1 }, true);
+		}
+	}
+
+	if (noticeTextTime <= 0)
+	{
+		if (noticeText != nullptr)
+		{
+			noticeText->destroy = true;
+			noticeText = nullptr;
+		}
+	}
 }
 
 void Player::SetUI()
@@ -170,21 +216,24 @@ void Player::SetUI()
 
 void Player::SetShield()
 {
-	if (sheild == nullptr)
-	{
-		sheild = ObjectManager::Instantiate<Sheild>(position);
-		sheild->SetSheild(this, 3);
-	}
+	sheild = ObjectManager::Instantiate<Sheild>(position);
+	sheild->SetSheild(this, 3);
 }
 
 void Player::SetBFB()
 {
-	static float t = 0;
-	t -= DXUTGetElapsedTime();
+	ObjectManager::Instantiate<BigFuckBomb>(position);
+}
 
-	if (t <= 0)
-	{
-		t = 1;
-		ObjectManager::Instantiate<BigFuckBomb>(position);
-	}
+void Player::LockInCamera()
+{
+	if (position.x - info.center.x <= Camera::position.x - SCREEN_WIDTH / 2)
+		position.x = Camera::position.x - SCREEN_WIDTH / 2 + info.center.x;
+	if (position.y - info.center.y <= Camera::position.y - SCREEN_HEIGHT / 2)
+		position.y = Camera::position.y - SCREEN_HEIGHT / 2 + info.center.y;
+
+	if (position.x + info.center.x >= Camera::position.x + SCREEN_WIDTH / 2)
+		position.x = Camera::position.x + SCREEN_WIDTH / 2 - info.center.x;
+	if (position.y + info.center.y >= Camera::position.y + SCREEN_HEIGHT / 2)
+		position.y = Camera::position.y + SCREEN_HEIGHT / 2 - info.center.y;
 }

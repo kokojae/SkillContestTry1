@@ -18,8 +18,6 @@
 #include "PlayerBullet.h"
 // Enemy
 #include "Enemy.h"
-#include "Boss.h"
-#include "BossHpBar.h"
 // Boss
 #include "Boss.h"
 #include "BossHpBar.h"
@@ -29,6 +27,11 @@
 #include "BigFuckBomb.h"
 #include "Sheild.h"
 
+// Item
+#include "ItemHeal.h"
+// Base
+#include "ItemBase.h"
+
 // Managers
 #include "Camera.h"
 #include "GameManager.h"
@@ -36,11 +39,13 @@
 #include "Layer.h"
 #include "MouseManager.h"
 #include "ObjectManager.h"
+#include "RankManager.h"
 #include "SceneManager.h"
 #include "SoundManager.h"
 #include "TextureManager.h"
 
 // Scene
+#include "RankInput.h"
 #include "Title.h"
 
 // Stage

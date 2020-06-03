@@ -4,17 +4,28 @@
 
 void BigFuckBomb::Init()
 {
-	ObjectManager::Instantiate<BombBullet>({ position.x + 20,position.y + 0 })->SetBullet({ 0,0 }, 25, 1, 3);
-	ObjectManager::Instantiate<BombBullet>({ position.x + 20,position.y + 20 })->SetBullet({ 0,0 }, 25, 1, 3);
-	ObjectManager::Instantiate<BombBullet>({ position.x + 0,position.y + 20 })->SetBullet({ 0,0 }, 25, 1, 3);
-	ObjectManager::Instantiate<BombBullet>({ position.x - 20,position.y + 20 })->SetBullet({ 0,0 }, 25, 1, 3);
-	ObjectManager::Instantiate<BombBullet>({ position.x - 20,position.y + 0 })->SetBullet({ 0,0 }, 25, 1, 3);
-	ObjectManager::Instantiate<BombBullet>({ position.x - 20,position.y - 20 })->SetBullet({ 0,0 }, 25, 1, 3);
-	ObjectManager::Instantiate<BombBullet>({ position.x + 0,position.y - 20 })->SetBullet({ 0,0 }, 25, 1, 3);
-	ObjectManager::Instantiate<BombBullet>({ position.x + 20,position.y - 20 })->SetBullet({ 0,0 }, 25, 1, 3);
+	ObjectManager::Instantiate<BombBullet>(position)->SetBullet({ 1,0 }, 25, 1, 3);
+	ObjectManager::Instantiate<BombBullet>(position)->SetBullet({ 1,1 }, 25, 1, 3);
+	ObjectManager::Instantiate<BombBullet>(position)->SetBullet({ 0,1 }, 25, 1, 3);
+	ObjectManager::Instantiate<BombBullet>(position)->SetBullet({ -1,1 }, 25, 1, 3);
+	ObjectManager::Instantiate<BombBullet>(position)->SetBullet({ -1,0 }, 25, 1, 3);
+	ObjectManager::Instantiate<BombBullet>(position)->SetBullet({ -1,-1 }, 25, 1, 3);
+	ObjectManager::Instantiate<BombBullet>(position)->SetBullet({ 0,-1 }, 25, 1, 3);
+	ObjectManager::Instantiate<BombBullet>(position)->SetBullet({ 1,-1 }, 25, 1, 3);
+
+	GameManager::isBombing = true;
+
+	printf("BombingTime is Start\n");
 }
 
 void BigFuckBomb::Update()
 {
+	bombingTime -= DXUTGetElapsedTime();
 
+	if (bombingTime <= 0)
+	{
+		GameManager::isBombing = false;
+		destroy = true;
+		printf("BombingTime is End\n");
+	}
 }

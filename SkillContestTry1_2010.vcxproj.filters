@@ -45,6 +45,12 @@
     <Filter Include="GameObject\Enemy\Boss">
       <UniqueIdentifier>{8825726b-b620-4a28-b190-b4e6d0a85894}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Item">
+      <UniqueIdentifier>{d5e31c5a-2279-4d24-9f54-c8a2cad93f77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Item\Base">
+      <UniqueIdentifier>{4f2a4b16-f1ef-438a-bbc6-f87f8788005b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -185,6 +191,18 @@
     <ClCompile Include="BossHpBar.cpp">
       <Filter>GameObject\Enemy\Boss</Filter>
     </ClCompile>
+    <ClCompile Include="ItemBase.cpp">
+      <Filter>Item\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="RankInput.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemHeal.cpp">
+      <Filter>Item</Filter>
+    </ClCompile>
+    <ClCompile Include="RankManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SkillContestTry1.h" />
@@ -265,6 +283,18 @@
     </ClInclude>
     <ClInclude Include="BossHpBar.h">
       <Filter>GameObject\Enemy\Boss</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemBase.h">
+      <Filter>Item\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="RankInput.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemHeal.h">
+      <Filter>Item</Filter>
+    </ClInclude>
+    <ClInclude Include="RankManager.h">
+      <Filter>Managers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

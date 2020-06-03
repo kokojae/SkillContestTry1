@@ -19,10 +19,15 @@ public:
     float straightTime;
     float radialTime;
     float fireBetTime;
-    
+    int score;
     Text* UIText;
 
     Sheild* sheild;
+    float sheildTime;
+    float bombingTime;
+    Text* noticeText;
+    float noticeTextTime;
+
     bool isImmortal;
 
     void Init()override;
@@ -41,5 +46,7 @@ public:
     void SetUI();
     void SetShield();
     void SetBFB();
+
+    void LockInCamera();
 };
 

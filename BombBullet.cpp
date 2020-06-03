@@ -19,10 +19,6 @@ void BombBullet::Update()
 
 void BombBullet::Move()
 {
-	force.x = sin(t) * sca;
-	force.y = cos(t) * sca;
-	t += 0.1;
-	sca = 1;
 }
 
 void BombBullet::Hit()

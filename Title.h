@@ -7,9 +7,11 @@ public:
     std::wstring backGround;
     std::wstring gameStart;
     std::wstring rankBoard;
+    std::wstring gameExit;
     D3DXVECTOR2 backGroundSize;
     D3DXVECTOR2 gameStartSize;
     D3DXVECTOR2 rankBoardSize;
+    D3DXVECTOR2 gameExitSize;
 
     void Init()override;
     void Update()override;
@@ -19,5 +21,6 @@ public:
     void SetBackGround();
     void SetGameStart();
     void SetRankBoard();
+    void SetGameExit();
 };
 

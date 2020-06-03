@@ -56,9 +56,9 @@ void GraphicManager::TextureRender(TextureInfo info, D3DXVECTOR2 position)
 	sprite->SetTransform(&mat);
 
 	// 도트겜에 사용
-	DXUTGetD3D9Device()->SetSamplerState(0,D3DSAMP_MINFILTER,D3DTEXF_POINT);
-	DXUTGetD3D9Device()->SetSamplerState(0,D3DSAMP_MAGFILTER,D3DTEXF_POINT);
-	DXUTGetD3D9Device()->SetSamplerState(0,D3DSAMP_MIPFILTER,D3DTEXF_POINT);
+	DXUTGetD3D9Device()->SetSamplerState(0, D3DSAMP_MINFILTER, D3DTEXF_POINT);
+	DXUTGetD3D9Device()->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_POINT);
+	DXUTGetD3D9Device()->SetSamplerState(0, D3DSAMP_MIPFILTER, D3DTEXF_POINT);
 
 	RECT rc = {
 		(LONG)info.index * (LONG)info.size.x,

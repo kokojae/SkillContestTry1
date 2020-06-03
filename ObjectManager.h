@@ -21,7 +21,7 @@ public:
 	static GameObject* ColliderCheck(RECT* objRect, int layer = Layer::DEFAULT);
 };
 
-bool Sort(const GameObject* a, const GameObject* b);
+bool SortZ(const GameObject* a, const GameObject* b);
 
 template<typename T>
 inline T* ObjectManager::Instantiate(D3DXVECTOR2 position)
@@ -29,9 +29,9 @@ inline T* ObjectManager::Instantiate(D3DXVECTOR2 position)
 	T* inst = new T;
 
 	objectList.push_back(inst);
-	inst->Init();
 	inst->position = position;
-	objectList.sort(Sort);
+	inst->Init();
+	objectList.sort(SortZ);
 
 	return inst;
 }

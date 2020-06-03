@@ -3,6 +3,7 @@
 #include "SkillContestTry1.h"
 
 Player* GameManager::player = nullptr;
+bool GameManager::isBombing = false;
 
 void GameManager::Init()
 {

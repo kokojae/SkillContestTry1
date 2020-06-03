@@ -84,7 +84,7 @@ GameObject* ObjectManager::ColliderCheck(RECT* objRect, int layer)
 	return nullptr;
 }
 
-bool Sort(const GameObject* a, const GameObject* b)
+bool SortZ(const GameObject* a, const GameObject* b)
 {
 	return a->z < b->z;
 }
