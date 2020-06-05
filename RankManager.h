@@ -19,5 +19,5 @@ public:
 	static void AddRank(std::wstring name, int score);
 };
 
-bool SortRank(Rank* a, Rank* b);
+bool SortRank(const Rank* a, const Rank* b);
 

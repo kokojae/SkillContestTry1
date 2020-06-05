@@ -6,8 +6,9 @@ class RankInput :
 	public GameObject
 {
 public:
-	std::wstring name = L"";
-	int alphabet = 0;
+	std::wstring name = L"   ";
+	int alphabet = 1;
+	int charCount = 0;
 
 	void Init()override;
 	void Update()override;
@@ -16,5 +17,6 @@ public:
 	void UpDown();
 
 	void SetName();
+
 };
 

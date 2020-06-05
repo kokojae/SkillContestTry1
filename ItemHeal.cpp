@@ -4,8 +4,8 @@
 
 void ItemHeal::Init()
 {
-	SetTexture(L"", {});
-	SetCollider({}, Layer::ITEM);
+	SetTexture(L"Resource/HealItem.png", { 256,256 });
+	SetCollider({ 256,256 }, Layer::ITEM);
 }
 
 void ItemHeal::Process(Player* player)

@@ -11,27 +11,8 @@ void Enemy::Init()
 
 void Enemy::Update()
 {
-	Move();
-	AddForce();
 	Detection();
 	Hit();
-}
-
-void Enemy::Move()
-{
-	if (isIncrease)
-	{
-		force.y += 0.1;
-		if (force.y >= 5)
-			isIncrease = !isIncrease;
-	}
-	else
-	{
-		force.y -= 0.1;
-		if (force.y <= -5)
-			isIncrease = !isIncrease;
-	}
-
 }
 
 void Enemy::Hit()
@@ -48,6 +29,7 @@ void Enemy::Hit()
 		{
 			GameManager::player->exp += exp;
 			destroy = true;
+			ItemProduce();
 		}
 	}
 }
@@ -75,4 +57,46 @@ void Enemy::Detection()
 			}
 		}
 	}
+}
+
+void Enemy::IsCamIn()
+{
+	isCamIn = IntersectRect(&RECT(), GetRect(), Camera::GetCameraRect());
+}
+
+void Enemy::ItemProduce()
+{
+	bool isSuccess = false;
+
+	do
+	{
+		int which = rand() % 4;
+
+		switch (which)
+		{
+		case 0:
+			ObjectManager::Instantiate<ItemHeal>(position);
+			isSuccess = true;
+			break;
+		case 1:
+			if (GameManager::player->level < 5)
+			{
+				printf("(대충 레벨업 아이템)\n");
+				isSuccess = true;
+			}
+			else
+			{
+				printf("레벨 5임 ㅅㄱ\n");
+			}
+			break;
+		case 2:
+			printf("(대충 쿨 초기화 템)\n");
+			isSuccess = true;
+			break;
+		default:
+			printf("아이템 안뜸 ㅅㄱ\n");
+			isSuccess = true;
+			break;
+		}
+	} while (!isSuccess);
 }

@@ -23,15 +23,18 @@ void SceneManager::LoadScene(Scene scene)
 		ObjectManager::Instantiate<Title>();
 		break;
 	case SceneManager::Scene::RANK_BOARD:
+		ObjectManager::Instantiate<RankBoard>();
 		break;
 	case SceneManager::Scene::STAGE1:
 		ObjectManager::Instantiate<BackGround>({ 2600 - SCREEN_WIDTH / 2,0 });
 		ObjectManager::Instantiate<Player>();
-		//for (int i = 0; i < 5; i++)
-		//{
-		//	ObjectManager::Instantiate<Enemy>({ 300,((float)i * 150) - 180 });
-		//}
-		ObjectManager::Instantiate<Boss>({ 500, 0 });
+		ObjectManager::Instantiate<ItemHeal>({ 500 ,0 });
+		ObjectManager::Instantiate<ItemHeal>({ 1000 ,0 });
+		for (int i = 0; i < 5; i++)
+		{
+			ObjectManager::Instantiate<Enemy>({ 300,((float)i * 150) - 180 });
+		}
+		ObjectManager::Instantiate<Boss>({ SCREEN_WIDTH, 0 });
 		break;
 	case SceneManager::Scene::STAGE2:
 		break;

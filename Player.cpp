@@ -47,6 +47,10 @@ void Player::Update()
 	if (exp >= expToNext)
 		LevelUp();
 	SetUI();
+	if (GetAsyncKeyState('Q'))
+	{
+		hp -= 1;
+	}
 }
 
 void Player::LateUpdate()

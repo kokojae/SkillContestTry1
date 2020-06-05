@@ -9,11 +9,3 @@ void BossHpBar::Init()
 	z = 90;
 	info.camOn = false;
 }
-
-void BossHpBar::Update()
-{
-	float scaleY = boss->hp / boss->maxHp;
-	if (scaleY <= 0)
-		scaleY = 0;
-	info.scale.x = scaleY;
-}

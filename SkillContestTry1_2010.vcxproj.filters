@@ -203,6 +203,9 @@
     <ClCompile Include="RankManager.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
+    <ClCompile Include="RankBoard.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SkillContestTry1.h" />
@@ -295,6 +298,9 @@
     </ClInclude>
     <ClInclude Include="RankManager.h">
       <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="RankBoard.h">
+      <Filter>Scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

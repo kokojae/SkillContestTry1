@@ -7,14 +7,27 @@ void Boss::Init()
 	SetTexture(L"Resource/Boss.png", { 495,240 });
 	SetCollider({ 495,240 }, Layer::ENEMY);
 
-	hpBar = ObjectManager::Instantiate<BossHpBar>({ SCREEN_WIDTH / 2, 100 });
-	hpBar->boss = this;
+	hp = maxHp = 10000;
 }
 
 void Boss::Update()
 {
-	Attack();
-	Hit();
+	IsCamIn();
+	if (isCamIn)
+	{
+		Attack();
+		Hit();
+		SetHpBar();
+	}
+}
+
+void Boss::Release()
+{
+	if (hpBar != nullptr)
+	{
+		hpBar->destroy = true;
+		hpBar = nullptr;
+	}
 }
 
 void Boss::Attack()
@@ -62,15 +75,52 @@ int Boss::Detection()
 
 void Boss::Pattern1()
 {
-	printf("Pattern1\n");
+	//printf("Pattern1\n");
 }
 
 void Boss::Pattern2()
 {
-	printf("Pattern2\n");
+	//printf("Pattern2\n");
 }
 
 void Boss::Pattern3()
 {
-	printf("Pattern3\n");
+	//printf("Pattern3\n");
+}
+
+void Boss::Hit()
+{
+	auto inst = PlaceMeeting({ 0,0 }, Layer::PLAYER_BULLET);
+
+	if (inst != nullptr)
+	{
+		auto bullet = dynamic_cast<PlayerBullet*>(inst);
+		hp -= bullet->damage;
+		bullet->destroy = true;
+
+		if (hp <= 0)
+		{
+			GameManager::player->exp += exp;
+			GameManager::player->hp = GameManager::player->maxHp;
+			destroy = true;
+		}
+	}
+}
+
+void Boss::SetHpBar()
+{
+	if (hpBar == nullptr)
+	{
+		if (isCamIn)
+		{
+			hpBar = ObjectManager::Instantiate<BossHpBar>({ SCREEN_WIDTH / 2,250 });
+		}
+	}
+	if (hpBar != nullptr)
+	{
+		float sca = hp / maxHp;
+		if (sca <= 0)
+			sca = 0;
+		hpBar->info.scale.x = sca;
+	}
 }

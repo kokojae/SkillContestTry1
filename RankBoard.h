@@ -1,11 +1,11 @@
 #pragma once
 #include "GameObject.h"
-class Boss;
-
-class BossHpBar :
+class RankBoard :
     public GameObject
 {
 public:
     void Init()override;
+    void Update()override;
+    void Render()override;
 };
 

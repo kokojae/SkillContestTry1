@@ -14,5 +14,6 @@ void ItemBase::Hit()
 	{
 		auto player = dynamic_cast<Player*>(inst);
 		Process(player);
+		destroy = true;
 	}
 }

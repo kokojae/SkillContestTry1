@@ -10,6 +10,11 @@ void GameManager::Init()
 	GraphicManager::Init();
 	SoundManager::Init();
 	SceneManager::LoadScene(SceneManager::Scene::TITLE);
+
+	RankManager::AddRank(L"IAM", 5882);
+	RankManager::AddRank(L"ASE", 6974);
+	RankManager::AddRank(L"XYK", 4064);
+	RankManager::AddRank(L"ING", 7941);
 }
 
 void GameManager::Update()

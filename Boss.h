@@ -8,17 +8,20 @@ class Boss :
 public:
     float patternBetTime;
 
-    float hp = 1000;
-    float maxHp = 1000;
-    BossHpBar* hpBar;
+    BossHpBar* hpBar = nullptr;
 
     void Init()override;
     void Update()override;
+    void Release()override;
 
     void Attack();
     int Detection();
     void Pattern1();
     void Pattern2();
     void Pattern3();
+
+    void Hit()override;
+
+    void SetHpBar();
 };
 

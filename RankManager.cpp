@@ -3,9 +3,9 @@
 
 std::list<Rank*> RankManager::rankingList = std::list<Rank*>();
 
-bool SortRank(Rank* a, Rank* b)
+bool SortRank(const Rank* a, const Rank* b)
 {
-	return a->score > a->score;
+	return a->score > b->score;
 }
 
 void RankManager::Release()

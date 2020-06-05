@@ -6,7 +6,9 @@ public:
 	static float degree;
 	static float scale;
 	static D3DXVECTOR2 shake;
+	static RECT rc;
 
 	static D3DXMATRIX GetCameraMatrix();
+	static RECT* GetCameraRect();
 };
 

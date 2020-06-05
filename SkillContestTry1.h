@@ -1,7 +1,7 @@
 #pragma once
 
-#define SCREEN_WIDTH 1250
-#define SCREEN_HEIGHT 720
+#define SCREEN_WIDTH 1920
+#define SCREEN_HEIGHT 1080
 #define WINDOWED true
 
 // Component
@@ -45,6 +45,7 @@
 #include "TextureManager.h"
 
 // Scene
+#include "RankBoard.h"
 #include "RankInput.h"
 #include "Title.h"
 
